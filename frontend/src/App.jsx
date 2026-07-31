@@ -6,7 +6,7 @@ import { useDropzone } from 'react-dropzone';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css';
 
-// Importar imágenes
+// Importar las imagenes de assets
 import logoAdidas from './assets/logo-adidas.png';
 import logoAdidasWhite from './assets/logo-adidas-white.png';
 import iconCreator from './assets/icon-creator.png';
@@ -19,7 +19,7 @@ import iconPublished from './assets/icon-published.png';
 const localizer = momentLocalizer(moment);
 const API_URL = 'http://localhost:5000/api';
 
-// ===== FUNCIÓN PARA COMPRIMIR IMAGEN =====
+// Funcion para comprimir imagens
 const compressImage = (file, maxWidth = 600, quality = 0.7) => {
   return new Promise((resolve) => {
     const reader = new FileReader();
@@ -51,7 +51,7 @@ const compressImage = (file, maxWidth = 600, quality = 0.7) => {
 };
 
 function App() {
-  // ===== ESTADOS =====
+  // ESTADOS
   const [launches, setLaunches] = useState([]);
   const [view, setView] = useState('list');
   const [userRole, setUserRole] = useState('creator');
@@ -75,13 +75,13 @@ function App() {
   const [reviewModal, setReviewModal] = useState(null);
   const [uploading, setUploading] = useState(false);
 
-  // ===== NOTIFICACIONES =====
+  // NOTIFICACIONES 
   const showNotification = (message, type = 'success') => {
     setNotification({ message, type });
     setTimeout(() => setNotification(null), 3000);
   };
 
-  // ===== DROPZONE =====
+  // DROPZONE
   const { getRootProps, getInputProps } = useDropzone({
     accept: { 'image/*': [] },
     onDrop: (acceptedFiles) => {
@@ -90,7 +90,7 @@ function App() {
     maxFiles: 1
   });
 
-  // ===== CRUD =====
+  // CRUD 
   const fetchLaunches = async () => {
     try {
       setLoading(true);
@@ -114,7 +114,7 @@ function App() {
     launch.description?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // ===== HANDLE SUBMIT CON COMPRESIÓN =====
+  // HANDLE SUBMIT CON COMPRESION
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.date || !form.market) {
@@ -254,7 +254,7 @@ function App() {
     setReviewModal(launch);
   };
 
-  // ===== COLORES =====
+  // COLORES
   const getStatusColor = (status) => {
     const colors = {
       'Draft': '#9CA3AF',
@@ -285,7 +285,7 @@ function App() {
     return icons[status] || iconDraft;
   };
 
-  // ===== EVENTOS DEL CALENDARIO =====
+  // EVENTOS DEL CALENDARIO 
   const calendarEvents = filteredLaunches
     .filter(l => l && l.date)
     .map(l => {
@@ -309,7 +309,7 @@ function App() {
       };
     });
 
-  // ===== JSX =====
+  // JSX 
   return (
     <div className={`app ${userRole === 'creator' ? 'role-creator' : 'role-approver'}`}>
       {/* HEADER */}

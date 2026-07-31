@@ -1,4 +1,4 @@
-/* ===== GENERAL ===== */
+/* LO GENERAL */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: #f0f0f0; }
 .app {
@@ -7,7 +7,7 @@ body { background: #f0f0f0; }
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* ===== HEADER ===== */
+/* EL HEADER */
 .header {
   margin-bottom: 30px;
   padding: 25px 30px;
@@ -35,7 +35,7 @@ body { background: #f0f0f0; }
 .text-white-light { color: rgba(255, 255, 255, 0.8) !important; }
 .subtitle { font-size: 14px; margin: 0; }
 
-/* ===== SELECTOR DE ROL ===== */
+/* SELECTOR DE ROL */
 .role-selector {
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@ body { background: #f0f0f0; }
 .select-approver:hover { background: #333; }
 .role-selector select:focus { outline: none; }
 
-/* ===== FILTROS ===== */
+/* PARTE DE FILTROS  */
 .filters {
   display: flex;
   gap: 15px;
@@ -109,7 +109,7 @@ body { background: #f0f0f0; }
 }
 .filters button:hover { background: #5a6268; }
 
-/* ===== VIEW TOGGLE ===== */
+/* EL VIEW TOGGLE */
 .view-toggle {
   display: flex;
   gap: 10px;
@@ -131,7 +131,7 @@ body { background: #f0f0f0; }
   border-color: #6C3CE1;
 }
 
-/* ===== STATS ===== */
+/*  STATS  */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -152,7 +152,7 @@ body { background: #f0f0f0; }
 .stat-label { font-size: 13px; color: #6B7280; margin-top: 4px; }
 .stat-icon { width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-right: 4px; }
 
-/* ===== FORMULARIO ===== */
+/* PARA EL FORMULARIO */
 .form-container {
   background: white;
   padding: 25px;
@@ -203,7 +203,7 @@ body { background: #f0f0f0; }
 }
 .form-buttons button[type="button"]:hover { background: #c0392b; }
 
-/* ===== LISTA ===== */
+/* PARA LISTA  */
 .launches-list { margin-top: 20px; }
 .launches-list h2 { margin-bottom: 20px; color: #333; }
 .empty-message {
@@ -312,7 +312,7 @@ body { background: #f0f0f0; }
   border-radius: 20px;
 }
 
-/* ===== HISTORIAL ===== */
+/* PARA HISTORIAL  */
 .history-container {
   margin-top: 12px;
   padding: 12px 16px;
@@ -333,7 +333,7 @@ body { background: #f0f0f0; }
 }
 .history-date { color: #999; font-size: 12px; }
 
-/* ===== MENSAJE APROBADOR ===== */
+/* MENSAJE APROBADOR */
 .approver-message {
   background: #f0f0f0;
   padding: 12px 20px;
@@ -347,7 +347,7 @@ body { background: #f0f0f0; }
 .approver-message p { margin: 0; }
 .approver-message strong { color: #6C3CE1; }
 
-/* ===== CALENDARIO ===== */
+/* PARA CALENDARIO */
 .calendar-container {
   background: white;
   padding: 25px;
@@ -357,7 +357,7 @@ body { background: #f0f0f0; }
 }
 .calendar-container h2 { margin-bottom: 20px; color: #333; }
 
-/* ===== FOOTER ===== */
+/* EL FOOTER (Simple)  */
 .footer {
   margin-top: 40px;
   padding-top: 20px;
@@ -367,7 +367,7 @@ body { background: #f0f0f0; }
   font-size: 13px;
 }
 
-/* ===== SPINNER ===== */
+/*  SPINNER  */
 .spinner-container {
   display: flex;
   justify-content: center;
@@ -411,7 +411,7 @@ body { background: #f0f0f0; }
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* ===== CALENDARIO - ESTILOS ===== */
+/*  CALENDARIO - ESTILOS */
 .calendar-legend {
   display: flex;
   gap: 20px;
@@ -432,7 +432,7 @@ body { background: #f0f0f0; }
 }
 .legend-color { width: 20px; height: 20px; border-radius: 4px; }
 
-/* ===== RESPONSIVE ===== */
+/*  RESPONSIVE  */
 @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 768px) {
   .app { padding: 15px; }
@@ -451,7 +451,7 @@ body { background: #f0f0f0; }
   .stat-number { font-size: 20px; }
 }
 
-/* ===== CALENDARIO - OVERRIDES ===== */
+/* CALENDARIO - OVERRIDES  */
 .rbc-event {
   border-radius: 6px !important;
   padding: 4px 8px !important;
@@ -496,7 +496,7 @@ body { background: #f0f0f0; }
   .rbc-toolbar-label { order: -1 !important; margin-bottom: 8px !important; }
   .rbc-btn-group { justify-content: center !important; }
 }
-/* ===== BOTÓN SEND TO REVIEW ===== */
+/* BOTON SEND TO REVIEW  */
 .btn-send-review {
   padding: 8px 18px;
   background: #8B5CF6;
@@ -512,7 +512,7 @@ body { background: #f0f0f0; }
   background: #7C3AED;
   transform: scale(1.02);
 }
-/* ===== TEXTAREA ===== */
+/* TEXTAREA  */
 .textarea-field {
   padding: 12px 15px;
   border: 2px solid #e0e0e0;
@@ -529,7 +529,7 @@ body { background: #f0f0f0; }
   border-color: #6C3CE1;
 }
 
-/* ===== DROPZONE ===== */
+/* DROPZONE  */
 .dropzone {
   border: 2px dashed #6C3CE1 !important;
   border-radius: 12px !important;
@@ -658,7 +658,7 @@ body { background: #f0f0f0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* ===== RESPONSIVE MODAL ===== */
+/*  RESPONSIVE MODAL */
 @media (max-width: 480px) {
   .modal-content {
     padding: 20px;

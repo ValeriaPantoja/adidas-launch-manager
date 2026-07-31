@@ -9,7 +9,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 const db = new sqlite3.Database('./launches.db');
 
-// ===== CREAR TABLA CON TODAS LAS COLUMNAS =====
+//CREAR TABLA CON TODO
 db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS launches (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -33,7 +33,7 @@ db.serialize(() => {
   )`);
 });
 
-// ===== SEED DE DATOS =====
+//SEED DE DATOS PARA VER
 db.get("SELECT COUNT(*) as count FROM launches", (err, row) => {
   if (!err && row && row.count === 0) {
     const sample = [
@@ -46,11 +46,11 @@ db.get("SELECT COUNT(*) as count FROM launches", (err, row) => {
     const insert = db.prepare('INSERT INTO launches (name, description, date, market, status, assets, image) VALUES (?,?,?,?,?,?,?)');
     sample.forEach(s => insert.run(s));
     insert.finalize();
-    console.log('📦 Datos de ejemplo cargados (con descripción)');
+    console.log('Datos de ejemplo cargados (con descripción)');
   }
 });
 
-// ===== RUTAS =====
+//RUTAS
 
 // GET - Listar lanzamientos
 app.get('/api/launches', (req, res) => {
@@ -79,7 +79,7 @@ app.get('/api/launches/:id/history', (req, res) => {
   );
 });
 
-// ===== POST - Crear lanzamiento (CON LOGS) =====
+// POST - Crear lanzamiento (CON LOGS)
 app.post('/api/launches', (req, res) => {
   console.log('📥 Datos recibidos en POST:');
   console.log('  name:', req.body.name);
@@ -154,7 +154,7 @@ app.put('/api/launches/:id/status', (req, res) => {
     const currentStatus = row.status;
     const targetStatus = status;
     
-    // CREADOR: solo puede enviar a revisión (Draft → In Review)
+    // CREADOR: que solo pueda enviar a revisar (Draft → In Review)
     if (user_role === 'creator' || user_role === 'creador') {
       if (currentStatus === 'Draft' && targetStatus === 'In Review') {
         // Permitido
@@ -202,6 +202,6 @@ app.get('/api/health', (req, res) => {
 
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Backend en http://localhost:${PORT}`);
-  console.log(`📊 Base de datos: launches.db`);
+  console.log(`Backend en http://localhost:${PORT}`);
+  console.log(`Base de datos: launches.db`);
 });
