@@ -67,22 +67,21 @@ This separation ensures that only authorized users can modify launch statuses.
 ```text
 Adidas-Launch-Manager/
 ├── backend/
-│   ├── server.js
+│   ├── launches.db
 │   ├── package.json
-│   └── launches.db
+│   └── server.js
 ├── frontend/
+│   ├── public/
 │   ├── src/
-│   │   ├── App.jsx
+│   │   ├── assets/
 │   │   ├── App.css
-│   │   ├── main.jsx
-│   │   └── assets/
-│   └── package.json
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
 ├── screenshots/
-│   ├── dashboard.png
-│   ├── launch-list.png
-│   ├── calendar.png
-│   ├── review-view.png
-│   └── status-history.png
 └── README.md
 ```
 
