@@ -185,9 +185,9 @@ This allows reviewers to explore the complete workflow immediately after startin
 
 ## YouTube Demo Video
 
-**Demo video (max. 6 minutes):**
+**Demo video:**
 
-PASTE_YOUR_YOUTUBE_LINK_HERE
+[Watch the demo video](https://youtu.be/-dSzEQachSs)
 
 ---
 
